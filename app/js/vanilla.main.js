@@ -62,7 +62,7 @@ var exists = function exists(element) {
 		}
 
 		// Navigation
-		var jsNav = document.getElementById('navigation');
+		var jsNav = document.getElementById('js-navigation');
 
 		// Navigation links
 		var jsNavLinks = document.querySelectorAll('.nav__menu a[href*="#"]');

@@ -56,7 +56,7 @@
 				}
 			
 		// Navigation
-			const jsNav = document.getElementById('navigation');
+			const jsNav = document.getElementById('js-navigation');
 
 			// Navigation links
 				const jsNavLinks = document.querySelectorAll('.nav__menu a[href*="#"]');

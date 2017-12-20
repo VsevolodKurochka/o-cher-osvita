@@ -36,7 +36,7 @@ mixin menu-item(isLink,href, name)
 		else
 			block
 
-mixin quadro()
-	+b.quadro
+mixin quadro(classname)
+	+b.quadro(class=classname)
 		- for(var i = 1; i <= 9; i++)
 			+e.SPAN.part(class="_" + i)

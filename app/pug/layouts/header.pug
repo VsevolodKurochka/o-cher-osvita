@@ -2,7 +2,7 @@ include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
 +b.HEADER.site-header
-	+quadro
+	+quadro('_style-1 site-header__quadro')
 	.v-container
 		+e.row.row
 			.v-col-12.v-col-sm-7
@@ -39,4 +39,4 @@ include ../helpers/mixins
 								+e.row
 									+e.INPUT.control(name="vphone" type="tel" placeholder="Ваш телефон")
 								+e.row
-									+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid(type="submit") Проконсультироваться<br>бесплатно
+									+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid.effect._bounce-top(type="submit") Проконсультироваться<br>бесплатно

@@ -1,6 +1,6 @@
 @include b('site-header'){
 	position: relative;
-	@include padding-y(75px, 50px);
+	@include padding-y(45px, 60px);
 	z-index: z-index('default');
 	@include bg('../img/header.jpg');
 	color: $color-white;
@@ -10,6 +10,9 @@
 		}
 	}
 	@include min(sm){
+		@include padding-y(75px, 50px);
+	}
+	@include min(md){
 		@include padding-y(140px, 80px);
 	}
 	@include e('row'){
@@ -24,7 +27,7 @@
 			position: relative;
 			&:before{
 				@include pseudo();
-				left: 100%;
+				left: 105%;
 				top: 0;
 				@include size(27px, 18px);
 				@include bg('../img/flag-poland.png');
@@ -39,15 +42,30 @@
 		}
 		@include ee('content'){
 			position: relative;
-			top: -45px;
-			padding-right: 75px;
+			top: -30px;
+			padding-right: 30px;
+			@include max(sm){
+				font-size: 16px;
+			}
+			@include min(sm){
+				padding-right: 75px;
+				top: -45px;
+			}
 			@include ee('inner'){
 				padding: 5px 30px 30px 15px;
 				background-color: $description-color;
 			}
+
 		}
 		@include ee('footer'){
 			margin-top: 15px;
+		}
+	}
+	@include e('quadro'){
+		top: calc(100% - #{$quadro-size / 3});
+		left: 0;
+		@include min(sm){
+			top: calc(100% - #{$quadro-size_sm / 3});
 		}
 	}
 }
