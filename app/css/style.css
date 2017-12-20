@@ -1048,6 +1048,12 @@ a, button {
   height: 90px;
 }
 
+.v-icon__title {
+  font-family: 'FormularBold';
+  font-size: 19px;
+  line-height: 1.1;
+}
+
 .v-icon_left {
   margin-bottom: 30px;
 }
@@ -1064,12 +1070,6 @@ a, button {
 
 .v-icon_left .v-icon__img {
   height: 60px;
-}
-
-.v-icon_left .v-icon__title {
-  font-family: 'FormularBold';
-  font-size: 19px;
-  line-height: 1.1;
 }
 
 @media (min-width: 1025px) {
@@ -1113,6 +1113,35 @@ a, button {
   .v-icon_left .v-icon__title {
     padding-right: 30px;
     font-size: 21px;
+  }
+}
+
+.v-icon_left-icon .v-icon__inner {
+  position: relative;
+}
+
+.v-icon_left-icon .v-icon__title {
+  font-size: 30px;
+}
+
+@media (min-width: 768px) {
+  .v-icon_left-icon .v-icon__inner {
+    min-height: 140px;
+  }
+  .v-icon_left-icon .v-icon__img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 140px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .v-icon_left-icon .v-icon .v-icon__title, .v-icon_left-icon .v-icon .v-icon__body {
+    padding-left: 150px;
+  }
+  .v-icon_left-icon .v-icon__title {
+    font-size: 45px;
   }
 }
 
@@ -2236,13 +2265,19 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .v-benefits {
   position: relative;
-  padding-top: 65px;
+  padding-top: 90px;
   padding-bottom: 65px;
   color: #fff;
 }
 
 .v-benefits_organization {
   background: url("../img/bg-benefit.jpg") 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.v-benefits_result {
+  background: url("../img/bg-benefit-result.jpg") 0 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -2324,6 +2359,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .v-future {
   position: relative;
   z-index: 1;
+  padding-top: 30px;
   margin-bottom: -15px;
 }
 

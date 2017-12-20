@@ -23,6 +23,11 @@
 			height: 90px;
 		}
 	}
+	@include e('title'){
+		font-family: 'FormularBold';
+		font-size: 19px;
+		line-height: 1.1;
+	}
 	&_left{
 		margin-bottom: 30px;
 		@include min(md){
@@ -36,11 +41,7 @@
 		@include e('img'){
 			height: 60px;
 		}
-		@include e('title'){
-			font-family: 'FormularBold';
-			font-size: 19px;
-			line-height: 1.1;
-		}
+		
 		@include min(md){
 			@include e('header'){
 				display: flex;
@@ -57,6 +58,39 @@
 			@include e('title'){
 				font-size: 21px;
 				padding-right: 30px;
+			}
+		}
+	}
+	&_left-icon &{
+		@include e('inner'){
+			position: relative;
+		}
+		@include e('img'){
+			
+		}
+		@include e('title'){
+			font-size: 30px;
+		}
+		@include min(sm){
+			@include e('inner'){
+				min-height: 140px;
+			}
+			@include e('img'){
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				height: 140px;
+			}
+			%left-icon-padding{
+				padding-left: 150px;
+			}
+			@include e('title'){
+				@extend %left-icon-padding;
+				font-size: 45px;
+			}
+			@include e('body'){
+				@extend %left-icon-padding;
 			}
 		}
 	}
