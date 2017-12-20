@@ -16,5 +16,14 @@ block content
 	include pug/sections/chance
 	include pug/sections/results
 	include pug/sections/for-what
+	include pug/sections/answer
+	include pug/sections/reviews
 block footer
 	include pug/layouts/footer
+	+b.modal#modal-form
+		+e.box._default
+			+e.header
+				+e.P.title Modal title
+				+e.BUTTON.close(data-close="vmodal") &times;
+			+e.body
+				p Lorem....

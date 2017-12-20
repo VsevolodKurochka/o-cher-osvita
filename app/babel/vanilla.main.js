@@ -105,7 +105,7 @@
 
 
 		// Modal Window initialization
-		let themeModal = 'vmodal';
+		let themeModal = 'v-modal';
 		let modalBtn = document.querySelectorAll(`[data-action="${themeModal}"]`);
 		let modalBtnL = modalBtn.length;
 

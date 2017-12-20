@@ -107,7 +107,7 @@ var exists = function exists(element) {
 		});
 
 		// Modal Window initialization
-		var themeModal = 'vmodal';
+		var themeModal = 'v-modal';
 		var modalBtn = document.querySelectorAll('[data-action="' + themeModal + '"]');
 		var modalBtnL = modalBtn.length;
 

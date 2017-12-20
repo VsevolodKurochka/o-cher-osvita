@@ -8,6 +8,9 @@
 	@include m('result'){
 		@include bg('../img/bg-benefit-result.jpg');
 	}
+	@include m('children'){
+		@include bg('../img/bg-benefit-children.jpg');
+	}
 	@media screen{
 		@include min(md){
 			background-attachment: fixed;

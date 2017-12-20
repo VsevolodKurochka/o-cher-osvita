@@ -46,6 +46,18 @@ mixin icon(classname, img, title)
 			+e.body
 				block
 
+mixin review(wrapper, name, country, img)
+	+b.review-item(class=wrapper)
+		if block
+			+e.content
+				block
+		+e.footer
+			+e.image
+				img(src=img)
+			+e.info
+				p=name
+				p=country
+
 mixin quadro(classname)
 	+b.quadro(class=classname)
 		- for(var i = 1; i <= 9; i++)
