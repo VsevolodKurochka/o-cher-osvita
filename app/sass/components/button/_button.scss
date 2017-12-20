@@ -16,6 +16,7 @@
   @include transition();
   @extend .font-weight-bold !optional;
 }
+
 @include b('btn'){
   @extend %btn-placeholder;
   &-group{
@@ -37,7 +38,7 @@
   }
   &_shadow{
     &-brand-1{
-      box-shadow: 0 3px 8px 1px transparentize($color-brand-1, 0.5);
+      box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.15);
     }
     &:hover{
       box-shadow: none;
@@ -45,6 +46,7 @@
   }
   &_navigation{
     background-color: $color-responsive-menu-light;
+    color: #fff;
     @include max(md){
       padding: 15px;
       width: 100%;
@@ -53,6 +55,11 @@
     }
     @include min(md){
       background-color: $color-brand-1;
+      box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.15);
+      &:before{
+        background-color: darken($color-brand-1, 10%);
+
+      }
     }
   }
 

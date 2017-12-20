@@ -2,7 +2,7 @@
 	position: fixed;
 	width: 100%;
 	left: 0;
-	z-index: z-index-index('fixed');
+	z-index: z-index('fixed');
 	@include max(md){
 		& + .site{
 			margin-top: 56px;

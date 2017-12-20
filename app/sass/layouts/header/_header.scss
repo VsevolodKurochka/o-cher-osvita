@@ -1,5 +1,15 @@
-@include b('header'){
+@include b('site-header'){
 	position: relative;
+	@include padding-y(75px, 50px);
 	z-index: z-index('default');
-	//@include bg('');
+	@include bg('../img/header.jpg');
+	color: $color-white;
+	@media screen{
+		@include min(md){
+			background-attachment: fixed;
+		}
+	}
+	@include min(sm){
+		@include padding-y(140px, 75px);
+	}
 }

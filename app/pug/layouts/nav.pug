@@ -15,17 +15,9 @@ include ../helpers/mixins
 						//+e.SPAN.text Menu
 					+e.logo-content
 						+e.logo-content-img(src="img/logo.png" alt="")
-				+e.NAV.menu.col-12.col-md-6#navigation
+				+e.NAV.menu.col-12.col-md-9#navigation
 					for item in navigation
 						+e.LI.menu-item
 							a(href=item.link)=item.name
 					+e.LI.menu-item
-						+b.BUTTON.btn._navigation(data-action="vmodal" data-open="#form") Button
-				+e.addition.col-4.col-md-3#js-vnav-addition
-					+e.addition-toggle#js-vnav-toggle
-						span
-						span
-						span
-					+e.addition-links.js-vnav-links
-						+e.A.addition-link +99 999 999 99
-						+e.A.addition-link._hidden +99 999 999 99
+						+b.BUTTON.btn._navigation.effect._bounce-top(data-action="vmodal" data-open="#form") Записаться на консультацию

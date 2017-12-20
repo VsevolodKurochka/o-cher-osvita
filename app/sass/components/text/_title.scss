@@ -1,19 +1,19 @@
 /// Sizes for elements.
 $sizes: (
-	'vtitle-xs': (
+	'v-title-xs': (
 		xs:   18px
 	),
-	'vtitle-sm': (
+	'v-title-sm': (
 		sm:   20px,
 		md:   30px,
 		lg:   40px
 	),
-	'vtitle-md': (
+	'v-title-md': (
 		sm:   30px,
 		md:   40px,
 		lg:   50px
 	),
-	'vtitle-lg': (
+	'v-title-lg': (
 		sm:   40px,
 		md:   50px,
 		lg:   60px
@@ -21,31 +21,32 @@ $sizes: (
 );
 
 
-%vtitle-default{
-	margin-top: 10px;
+%v-title-default{
+	margin-top: 5px;
 	margin-bottom: 15px;
 	line-height: 1.2;
 	font-weight: normal;
+	@extend .bold;
 }
-.vtitle{
+@include b('title'){
 	&-xs{
 		font-size: 18px;
-		@include fs('vtitle-xs');
-		@extend %vtitle-default;
+		@include fs('v-title-xs');
+		@extend %v-title-default;
 	}
 	&-sm{
 		font-size: 20px;
-		@include fs('vtitle-sm');
-		@extend %vtitle-default;
+		@include fs('v-title-sm');
+		@extend %v-title-default;
 	}
 	&-md{
 		font-size: 25px;
-		@include fs('vtitle-md');
-		@extend %vtitle-default;
+		@include fs('v-title-md');
+		@extend %v-title-default;
 	}
 	&-lg{
 		font-size: 30px;
-		@include fs('vtitle-lg');
-		@extend %vtitle-default;
+		@include fs('v-title-lg');
+		@extend %v-title-default;
 	}
 }

@@ -3,12 +3,15 @@
 		font-size: 0;
 		&-content{
 			display: inline-block;
+			vertical-align: middle;
+			&-img{
+				max-height: 23px;
+			}
 		}
-		@include max(md){
-			.#{$themeNav}_style &{
-				img{
-					vertical-align: middle;
-					max-height: 28px;
+		@include min(md){
+			&-content{
+				&-img{
+					max-height: 46px;
 				}
 			}
 		}

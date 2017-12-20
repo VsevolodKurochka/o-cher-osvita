@@ -35,7 +35,7 @@ var exists = function exists(element) {
 
 		var classes = {
 			active: 'active',
-			menuActive: 'vnav__menu_active'
+			menuActive: 'active'
 
 			// Anchors links
 		};function scrollTo(element, to, duration) {
