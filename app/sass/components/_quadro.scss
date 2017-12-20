@@ -1,5 +1,5 @@
 $quadro-size: 102px;
-$quadro-size_sm: 204px;
+$quadro-size_md: 204px;
 @include b('quadro'){
 	display: flex;
 	flex-flow: row wrap;
@@ -9,10 +9,10 @@ $quadro-size_sm: 204px;
 		@include size($quadro-size / 3);
 	}
 	background-color: transparent;
-	@include min(sm){
-		@include size($quadro-size_sm);
+	@include min(md){
+		@include size($quadro-size_md);
 		@include e('part'){
-			@include size($quadro-size_sm / 3);
+			@include size($quadro-size_md / 3);
 		}
 	}
 	&_style-1 &{

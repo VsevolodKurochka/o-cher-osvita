@@ -6,7 +6,7 @@ include ../helpers/mixins
 	+b.nav._style#js-wrapper-navigation
 		+e.container.container
 			+e.row.row.flex_y-center
-				+e.logo.col-8.col-md-3
+				+e.logo.col-8.col-md-2
 					+b.hamburger._effect-1(type="button" id="js-vnav__btn")
 						+e.SPAN.lines
 							span Line1
@@ -15,7 +15,7 @@ include ../helpers/mixins
 						//+e.SPAN.text Menu
 					+e.logo-content
 						+e.logo-content-img(src="img/logo.png" alt="")
-				+e.NAV.menu.col-12.col-md-9#js-navigation
+				+e.NAV.menu.col-12.col-md-10#js-navigation
 					for item in navigation
 						+e.LI.menu-item
 							a(href=item.link)=item.name

@@ -64,8 +64,8 @@
 	@include e('quadro'){
 		top: calc(100% - #{$quadro-size / 3});
 		left: 0;
-		@include min(sm){
-			top: calc(100% - #{$quadro-size_sm / 3});
+		@include min(md){
+			top: calc(100% - #{$quadro-size_md / 3});
 		}
 	}
 }

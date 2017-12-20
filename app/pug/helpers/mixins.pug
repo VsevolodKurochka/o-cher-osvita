@@ -36,6 +36,16 @@ mixin menu-item(isLink,href, name)
 		else
 			block
 
+mixin icon(classname, img, title)
+	+b.icon(class=classname)
+		+e.inner
+			+e.header
+				+e.img(src=img)
+				if title
+					+e.P.title
+			+e.body
+				block
+
 mixin quadro(classname)
 	+b.quadro(class=classname)
 		- for(var i = 1; i <= 9; i++)

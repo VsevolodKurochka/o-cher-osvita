@@ -1,0 +1,26 @@
+@include b('icon'){
+	&_center{
+		text-align: center;
+		@include max(sm){
+			&:not(:last-child){
+				margin-bottom: 30px;
+			}
+		}
+	}
+	&_center &{
+		@include e('inner'){
+			@include min(md){
+				@include padding-x(30px);
+			}
+		}
+		@include e('header'){
+			margin-bottom: 15px;
+			@include min(sm){
+				margin-bottom: 45px;
+			}
+		}
+		@include e('img'){
+			height: 90px;
+		}
+	}
+}
