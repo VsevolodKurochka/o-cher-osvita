@@ -12,4 +12,42 @@
 	@include min(sm){
 		@include padding-y(140px, 75px);
 	}
+	@include e('row'){
+		@include min(md){
+			justify-content: space-between;
+		}
+	}
+	@include e('title'){
+		margin-bottom: 30px;
+		@include ee('flag'){
+			display: inline-block;
+			position: relative;
+			&:before{
+				@include pseudo();
+				left: 100%;
+				top: 0;
+				@include size(27px, 18px);
+				@include bg('../img/flag-poland.png');
+			}
+		}
+	}
+	@include e('description'){
+		$description-color: transparentize($color-black, 0.2);
+		@include ee('title'){
+			padding: 15px 15px 60px 15px;
+			background-color: $description-color;
+		}
+		@include ee('content'){
+			position: relative;
+			top: -45px;
+			padding-right: 75px;
+			@include ee('inner'){
+				padding: 5px 30px 30px 15px;
+				background-color: $description-color;
+			}
+		}
+		@include ee('footer'){
+			margin-top: 15px;
+		}
+	}
 }

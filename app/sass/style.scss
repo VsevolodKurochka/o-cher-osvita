@@ -11,6 +11,31 @@
 // Grid
 @import 'grid/*';
 
+//@import "dev/loader";
+@import 'utilities/classes';
+@import 'utilities/colors';
+@import 'utilities/background';
+@import 'utilities/offsets';
+@import 'utilities/text';
+
+// Button
+@import 'components/shadow';
+
+@import 'components/button/helpers';
+@import 'components/button/effects';
+@import 'components/button/button';
+
+// Form
+@import 'components/form/form-helpers';
+@import 'components/form/form';
+@import 'components/form/form-controls';
+
+// List
+@import 'components/list/list';
+@import 'components/list/list-variants';
+
+@import 'components/text/*';
+
 // Layouts
 @import 'layouts/nav/nav-variables';
 @import 'layouts/nav/nav-fixed';
@@ -31,28 +56,9 @@
 // Pages
 @import 'pages/*';
 
-//@import "dev/loader";
-@import 'utilities/classes';
-@import 'utilities/colors';
-@import 'utilities/background';
-@import 'utilities/offsets';
-@import 'utilities/text';
 
-// Button
-@import 'components/button/helpers';
-@import 'components/button/effects';
-@import 'components/button/button';
 
-// Form
-@import 'components/form/form-helpers';
-@import 'components/form/form';
-@import 'components/form/form-controls';
 
-// List
-@import 'components/list/list';
-@import 'components/list/list-variants';
-
-@import 'components/text/*';
 
 //@import 'fontawesome/font-awesome';
 @import 'vendor/tabs/tabs';

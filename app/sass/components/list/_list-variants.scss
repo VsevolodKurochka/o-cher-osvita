@@ -1,11 +1,15 @@
 @include b('list'){
-	&_cancel{
+	&_check{
     li{
       padding-left: 30px;
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
       &:after{
-        top: 0;
+        top: 5px;
         left: 0;
-        @include size(37px);
+        @include bg('../img/list-check.png');
+        @include size(19px, 17px);
       }
     }
   }

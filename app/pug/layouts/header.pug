@@ -3,8 +3,38 @@ include ../helpers/config
 
 +b.HEADER.site-header
 	.v-container
-		+b.H1.title-lg
-			|Среднее
-			br
-			|образование в 
-			span.flag Польше
+		+e.row.row
+			.v-col-12.v-col-sm-7
+				+e.H1.title.title-lg
+					|Среднее
+					br
+					|образование в 
+					+e.SPAN.title-flag Польше
+				+e.description
+					+e.P.description-title Поможем Вашему ребенку поступить в престижную польскую школу, лицей или техникум, после которого он сможет:
+					+e.description-content
+						+e.description-content-inner
+							+b.UL.list._check
+								li Стать студентом рейтингового Европейского вуза
+								li Остаться жить и работать в Европе или
+								li Вернуться востребованным специалистом в Украину
+							+e.description-footer
+								p
+									span.v-color-brand-3 * 
+									|9 из 10 детей наших клиентов остаются жить в Европе после окончания лицея или техникума в Польше
+			.v-col-12.v-col-sm-5.v-col-md-4
+				+b.shadow
+					+e.P.title
+						| Запишитесь на
+						span.color-brand-2 бесплатную консультацию
+						| и мы предварительно оценим шансы Вашего ребенка на поступление
+					+b.FORM.form._block(action="mail.php" method="POST")
+						+e.content
+							+e.row
+								+e.INPUT.control(name="vname" type="text" placeholder="Ваше имя")
+							+e.row
+								+e.INPUT.control(name="vemail" type="email" placeholder="Ваш email")
+							+e.row
+								+e.INPUT.control(name="vphone" type="tel" placeholder="Ваш телефон")
+							+e.row
+								+e.BUTTON.submit.vbtn._color-brand-1(type="submit") Проконсультироваться<br>бесплатно
