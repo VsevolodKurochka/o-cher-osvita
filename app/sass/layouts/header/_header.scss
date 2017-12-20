@@ -68,4 +68,12 @@
 			top: calc(100% - #{$quadro-size_md / 3});
 		}
 	}
+	@include e('column'){
+		@include m('form'){
+			@include min(sm){
+				position: relative;
+				top: 200px;
+			}
+		}
+	}
 }

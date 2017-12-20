@@ -42,7 +42,7 @@ mixin icon(classname, img, title)
 			+e.header
 				+e.img(src=img)
 				if title
-					+e.P.title
+					+e.P.title=title
 			+e.body
 				block
 

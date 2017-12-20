@@ -6,7 +6,7 @@
 	color: $color-general;
 	font-size: 16px;
 	z-index: 1;
-	@include m('ukraine-map'){
+	@include m('background'){
 		overflow: hidden;
 		@include margin-x(-15px);
 		&:before{
@@ -14,15 +14,29 @@
 			right: -100px;
 			top: 50%;
 			transform: translateY(-50%);
-			@include size(500px, 340px);
-			@include bg('../img/ukraine-map.png');
 			z-index: z-index('below');
 		}
-		@include min(sm){
+		&-ukraine-map{
 			&:before{
-				right: -150px;
-				@include size(804px, 553px);
-				@include bg('../img/ukraine-map-1.png');
+				@include size(500px, 340px);
+				@include bg('../img/ukraine-map.png');
+			}
+			@include min(sm){
+				&:before{
+					right: -150px;
+					@include size(804px, 553px);
+					@include bg('../img/ukraine-map-1.png');
+				}
+			}
+		}
+		&-poland-arms{
+			&:before{
+				@include bg('../img/poland-arms.png');
+			}
+			@include min(sm){
+				&:before{
+					@include size(622px, 677px);
+				}
 			}
 		}
 	}

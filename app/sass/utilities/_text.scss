@@ -1,4 +1,9 @@
 .#{$themePrefix}text{
+	p{
+		&:not(:last-child){
+			margin-bottom: 15px;
+		}
+	}
 	&-uppercase{
 		text-transform: uppercase;
 	}
