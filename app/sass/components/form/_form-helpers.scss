@@ -1,4 +1,4 @@
-$themeFormDesign: 'new';
+$themeFormDesign: 'old';
 
 @mixin input-default(){
 	display: block;
@@ -16,7 +16,7 @@ $themeFormDesign: 'new';
 	}
 }
 @mixin rowOffset(){
-	margin-bottom: 15px;
+	margin-bottom: 7.5px;
 	&:last-child{
 		margin-bottom: 0;
 	}

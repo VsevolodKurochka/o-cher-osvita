@@ -1,5 +1,4 @@
 // General functions
-	console.log(1);
 	function log(logText){
 		console.log(logText);
 	}
@@ -29,7 +28,7 @@
 
 		const classes = {
 			active: 'active',
-			menuActive: 'vnav__menu_active'
+			menuActive: 'active'
 		}
 
 		// Anchors links
@@ -95,6 +94,14 @@
 						toggleClass(this, classes.active);
 					});	
 				}
+
+			// Window scrolling JS
+				const jsNavWrapper = document.getElementById('js-wrapper-navigation');
+				window.addEventListener("scroll", function(){
+					let windowScroll = this.scrollY;
+					windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
+
+				});
 
 
 		// Modal Window initialization

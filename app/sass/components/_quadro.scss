@@ -1,0 +1,7 @@
+@include b('quadro'){
+	@include absolute();
+	@include size(102px);
+	@include min(sm){
+		@include size(204px);
+	}
+}

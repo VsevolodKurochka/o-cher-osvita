@@ -65,7 +65,7 @@
 	}@else{
 		&__control{
 			@include input-default();
-			border: 1px solid #ddd;
+			border: 2px solid #e6e6e6;
 			&:focus{
 				border-color: $color-brand-1;
 				@include placeholder{

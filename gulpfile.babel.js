@@ -116,27 +116,18 @@ gulp.task('templates:watch', () => {
 
 // JS
 
-gulp.task('scripts', () =>
-	browserify({
-		entries: './app/babel/app.js',
-		debug: true
-	})
-	.transform(babelify)
-	.on('error', notify.onError({
-			title: 'babelify Error',
-			message: '<%= error.message %>'
-	}))
-	.bundle()
-	.on('error', notify.onError({
-			title: 'Bundle Error',
-			message: '<%= error.message %>'
-	}))
-	.pipe(source('bundle.js'))
-	.pipe(gulp.dest('app/js'))
+gulp.task('babel', () => 
+	gulp.src('app/babel/**/*.js')
+		.pipe(babel())
+		.on('error', notify.onError({
+				title: 'Babel Error',
+				message: '<%= error.message %>'
+		}))
+		.pipe(gulp.dest('app/js'))
 );
 
-gulp.task('scripts:watch', () => {
-	gulp.watch("app/babel/**/*.js", gulp.series('scripts', reload));
+gulp.task('babel:watch', () => {
+	gulp.watch("app/babel/**/*.js", gulp.series('babel', reload));
 });
 
 
@@ -146,7 +137,7 @@ gulp.task(
 	gulp.parallel(
 		serve,
 		'sass:watch',
-		'scripts:watch',
+		'babel:watch',
 		'templates:watch'
 	)
 );

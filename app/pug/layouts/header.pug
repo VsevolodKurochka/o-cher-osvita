@@ -1,7 +1,8 @@
 include ../bem/index
 include ../helpers/config
-
+include ../helpers/mixins
 +b.HEADER.site-header
+	+quadro
 	.v-container
 		+e.row.row
 			.v-col-12.v-col-sm-7
@@ -25,16 +26,17 @@ include ../helpers/config
 			.v-col-12.v-col-sm-5.v-col-md-4
 				+b.shadow
 					+e.P.title
-						| Запишитесь на
-						span.color-brand-2 бесплатную консультацию
+						| Запишитесь на 
+						span.v-color-brand-2 бесплатную консультацию 
 						| и мы предварительно оценим шансы Вашего ребенка на поступление
-					+b.FORM.form._block(action="mail.php" method="POST")
-						+e.content
-							+e.row
-								+e.INPUT.control(name="vname" type="text" placeholder="Ваше имя")
-							+e.row
-								+e.INPUT.control(name="vemail" type="email" placeholder="Ваш email")
-							+e.row
-								+e.INPUT.control(name="vphone" type="tel" placeholder="Ваш телефон")
-							+e.row
-								+e.BUTTON.submit.vbtn._color-brand-1(type="submit") Проконсультироваться<br>бесплатно
+					+e.content
+						+b.FORM.form._block(action="mail.php" method="POST")
+							+e.content
+								+e.row
+									+e.INPUT.control(name="vname" type="text" placeholder="Ваше имя")
+								+e.row
+									+e.INPUT.control(name="vemail" type="email" placeholder="Ваш email")
+								+e.row
+									+e.INPUT.control(name="vphone" type="tel" placeholder="Ваш телефон")
+								+e.row
+									+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid(type="submit") Проконсультироваться<br>бесплатно

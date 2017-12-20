@@ -3,7 +3,7 @@ include ../helpers/config
 include ../helpers/data
 include ../helpers/mixins
 +b.fixed._md-top
-	+b.nav._style
+	+b.nav._style#js-wrapper-navigation
 		+e.container.container
 			+e.row.row.flex_y-center
 				+e.logo.col-8.col-md-3
@@ -15,7 +15,7 @@ include ../helpers/mixins
 						//+e.SPAN.text Menu
 					+e.logo-content
 						+e.logo-content-img(src="img/logo.png" alt="")
-				+e.NAV.menu.col-12.col-md-9#navigation
+				+e.NAV.menu.col-12.col-md-9#js-navigation
 					for item in navigation
 						+e.LI.menu-item
 							a(href=item.link)=item.name

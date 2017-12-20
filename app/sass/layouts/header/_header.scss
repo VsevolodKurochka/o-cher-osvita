@@ -10,7 +10,7 @@
 		}
 	}
 	@include min(sm){
-		@include padding-y(140px, 75px);
+		@include padding-y(140px, 80px);
 	}
 	@include e('row'){
 		@include min(md){

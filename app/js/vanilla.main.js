@@ -99,6 +99,13 @@ var exists = function exists(element) {
 			});
 		}
 
+		// Window scrolling JS
+		var jsNavWrapper = document.getElementById('js-wrapper-navigation');
+		window.addEventListener("scroll", function () {
+			var windowScroll = this.scrollY;
+			windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
+		});
+
 		// Modal Window initialization
 		var themeModal = 'vmodal';
 		var modalBtn = document.querySelectorAll('[data-action="' + themeModal + '"]');
