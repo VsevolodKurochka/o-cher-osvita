@@ -1,0 +1,14 @@
+@include b('future'){
+	@include e('column'){
+		@include m('text'){
+			@include min(sm){
+				padding-bottom: 140px;
+			}
+		}
+		@include m('image'){
+			@include min(sm){
+				align-self: flex-end;
+			}
+		}
+	}
+}

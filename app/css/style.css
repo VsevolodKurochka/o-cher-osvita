@@ -1547,7 +1547,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .v-title-xs, .v-title-sm, .v-title-md, .v-title-lg {
   margin-top: 5px;
-  margin-bottom: 15px;
   font-weight: normal;
   line-height: 1.2;
 }
@@ -2164,6 +2163,20 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .v-bonus__content {
   margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .v-future__column_text {
+    padding-bottom: 140px;
+  }
+}
+
+@media (min-width: 768px) {
+  .v-future__column_image {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
 }
 
 .vtabs__list {
