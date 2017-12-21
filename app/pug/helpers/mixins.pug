@@ -32,7 +32,7 @@ mixin menu-item(isLink,href, name)
 
 	li(class=menuItemClass)
 		if isLink === 'true'
-			a( href=href )=name
+			a( data-scroll href=href )=name
 		else
 			block
 

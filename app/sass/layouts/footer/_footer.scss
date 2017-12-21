@@ -22,6 +22,11 @@ $footer-map: (
 		font-size: 13px;
 		color: inherit;
 		outline: none;
+		@include max(sm){
+			&:not(:last-child){
+				margin-bottom: 15px;
+			}
+		}
 		@include min(sm){
 			&:not(:last-child){
 				margin-right: 15px;
@@ -36,6 +41,9 @@ $footer-map: (
 	}
 
 	@include e('logo'){
+		@include max(sm){
+			margin-bottom: 15px;
+		}
 		img{
 			max-height: 30px;
 			opacity: 0.5;

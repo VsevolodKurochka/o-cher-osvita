@@ -29,7 +29,7 @@
 		const classes = {
 			active: 'active',
 			menuActive: 'active'
-		}
+		};
 
 		// Anchors links
 			function scrollTo(element, to, duration) {
@@ -44,21 +44,26 @@
 			}
 			
 			// Anchors
-				const anchors = document.getElementsByClassName('anchor');
+				// const anchors = document.getElementsByClassName('anchor');
 
-				for(let i = 0; i < anchors.length; i++){
-					anchors[i].addEventListener('click', function(e) {
-						e.preventDefault();
-						let href = this.getAttribute("href").replace("#", "");
-						let scrollAnchor = document.getElementById(href);
-						scrollTo(document.body, scrollAnchor.offsetTop, 600);
-					});
-				}
+				// for(let i = 0; i < anchors.length; i++){
+				// 	anchors[i].addEventListener('click', function(e) {
+				// 		e.preventDefault();
+				// 		let href = this.getAttribute("href").replace("#", "");
+				// 		let scrollAnchor = document.getElementById(href);
+				// 		scrollTo(document.body, scrollAnchor.offsetTop, 600);
+				// 	});
+				// }
 			
 		// Navigation
 			const jsNav = document.getElementById('js-navigation');
 
 			// Navigation links
+
+				var scroll = new SmoothScroll('a[href*="#"]', {
+					speed: 1000
+				});
+
 				const jsNavLinks = document.querySelectorAll('.v-nav__menu a[href*="#"]');
 
 				for(var i = 0; i < jsNavLinks.length; i++){
@@ -69,10 +74,10 @@
 						let vnavhref = this.getAttribute("href").replace("#", "");
 						let vnavscrollAnchor = document.getElementById(vnavhref);
 
-						//removeClass(jsNavBtn, classes.active);
-						//removeClass(jsNav, classes.menuActive);
+						removeClass(jsNavBtn, classes.active);
+						removeClass(jsNav, classes.menuActive);
 
-						scrollTo(document.body, vnavscrollAnchor.offsetTop, 600);
+						//scrollTo(document.body, vnavscrollAnchor.offsetTop, 600);
 
 					});
 				}
@@ -98,11 +103,15 @@
 
 			// Window scrolling JS
 				const jsNavWrapper = document.getElementById('js-wrapper-navigation');
-				window.addEventListener("scroll", function(){
-					let windowScroll = this.scrollY;
-					windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
 
-				});
+				function checkScrollY(){
+					let windowScroll = window.scrollY;
+					windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
+				}
+
+				checkScrollY();
+
+				window.addEventListener("scroll", checkScrollY);
 
 
 		// Modal Window initialization

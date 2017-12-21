@@ -35,9 +35,10 @@ var exists = function exists(element) {
 		var classes = {
 			active: 'active',
 			menuActive: 'active'
+		};
 
-			// Anchors links
-		};function scrollTo(element, to, duration) {
+		// Anchors links
+		function scrollTo(element, to, duration) {
 			if (duration <= 0) return;
 			var difference = to - element.scrollTop - 75;
 			var perTick = difference / duration * 10;
@@ -49,21 +50,26 @@ var exists = function exists(element) {
 		}
 
 		// Anchors
-		var anchors = document.getElementsByClassName('anchor');
+		// const anchors = document.getElementsByClassName('anchor');
 
-		for (var _i = 0; _i < anchors.length; _i++) {
-			anchors[_i].addEventListener('click', function (e) {
-				e.preventDefault();
-				var href = this.getAttribute("href").replace("#", "");
-				var scrollAnchor = document.getElementById(href);
-				scrollTo(document.body, scrollAnchor.offsetTop, 600);
-			});
-		}
+		// for(let i = 0; i < anchors.length; i++){
+		// 	anchors[i].addEventListener('click', function(e) {
+		// 		e.preventDefault();
+		// 		let href = this.getAttribute("href").replace("#", "");
+		// 		let scrollAnchor = document.getElementById(href);
+		// 		scrollTo(document.body, scrollAnchor.offsetTop, 600);
+		// 	});
+		// }
 
 		// Navigation
 		var jsNav = document.getElementById('js-navigation');
 
 		// Navigation links
+
+		var scroll = new SmoothScroll('a[href*="#"]', {
+			speed: 1000
+		});
+
 		var jsNavLinks = document.querySelectorAll('.v-nav__menu a[href*="#"]');
 
 		for (var i = 0; i < jsNavLinks.length; i++) {
@@ -74,10 +80,10 @@ var exists = function exists(element) {
 				var vnavhref = this.getAttribute("href").replace("#", "");
 				var vnavscrollAnchor = document.getElementById(vnavhref);
 
-				//removeClass(jsNavBtn, classes.active);
-				//removeClass(jsNav, classes.menuActive);
+				removeClass(jsNavBtn, classes.active);
+				removeClass(jsNav, classes.menuActive);
 
-				scrollTo(document.body, vnavscrollAnchor.offsetTop, 600);
+				//scrollTo(document.body, vnavscrollAnchor.offsetTop, 600);
 			});
 		}
 
@@ -101,10 +107,15 @@ var exists = function exists(element) {
 
 		// Window scrolling JS
 		var jsNavWrapper = document.getElementById('js-wrapper-navigation');
-		window.addEventListener("scroll", function () {
-			var windowScroll = this.scrollY;
+
+		function checkScrollY() {
+			var windowScroll = window.scrollY;
 			windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
-		});
+		}
+
+		checkScrollY();
+
+		window.addEventListener("scroll", checkScrollY);
 
 		// Modal Window initialization
 		var themeModal = 'v-modal';
@@ -144,9 +155,9 @@ var exists = function exists(element) {
 		}
 		function bodyClick(e) {
 			var target = getEventTarget(e);
-			for (var _i2 = 0; _i2 < modalL; _i2++) {
-				if (target == modal[_i2]) {
-					modalClose(modal[_i2]);
+			for (var _i = 0; _i < modalL; _i++) {
+				if (target == modal[_i]) {
+					modalClose(modal[_i]);
 				}
 			}
 		}
@@ -184,8 +195,8 @@ var exists = function exists(element) {
 			});
 		}
 
-		for (var _i3 = 0; _i3 < modalBtnCloseL; _i3++) {
-			modalBtnClose[_i3].addEventListener('click', function () {
+		for (var _i2 = 0; _i2 < modalBtnCloseL; _i2++) {
+			modalBtnClose[_i2].addEventListener('click', function () {
 				modalClose(this.closest('.' + themeModal));
 			});
 		}
@@ -193,8 +204,8 @@ var exists = function exists(element) {
 		var bodyEvents = ['click', 'touchstart'];
 		var bodyEventsL = bodyEvents.length;
 
-		for (var _i4 = 0; _i4 < bodyEventsL; _i4++) {
-			document.body.addEventListener(bodyEvents[_i4], function (e) {
+		for (var _i3 = 0; _i3 < bodyEventsL; _i3++) {
+			document.body.addEventListener(bodyEvents[_i3], function (e) {
 				bodyClick(e);
 			}, false);
 		}
