@@ -39,4 +39,17 @@
 			}
 		}
 	}
+	@include e('video'){
+		text-align: center;
+		margin-bottom: 45px;
+		@include ee('iframe'){
+			display: inline-block;
+			height: 300px;
+			width: 100%;
+			@include min(sm){
+				width: 650px;
+				height: 350px;
+			}
+		}
+	}
 }

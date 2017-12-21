@@ -2405,6 +2405,24 @@ input[type="checkbox"]:checked + .control__indicator:before {
   }
 }
 
+.v-benefits__video {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.v-benefits__video-iframe {
+  display: inline-block;
+  width: 100%;
+  height: 300px;
+}
+
+@media (min-width: 768px) {
+  .v-benefits__video-iframe {
+    width: 650px;
+    height: 350px;
+  }
+}
+
 .v-bonus {
   padding-top: 90px;
   padding-bottom: 0;
@@ -2565,6 +2583,10 @@ input[type="checkbox"]:checked + .control__indicator:before {
   color: #ddd;
 }
 
+.v-review {
+  padding-bottom: 100px;
+}
+
 @media (min-width: 1025px) {
   .v-review__shadow {
     padding-right: 60px;
@@ -2580,11 +2602,18 @@ input[type="checkbox"]:checked + .control__indicator:before {
   margin-bottom: 30px;
 }
 
+.v-review-item__content p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .v-review-item__info {
   font-family: 'FormularBold';
 }
 
 @media (min-width: 768px) {
+  .v-review-item__content {
+    min-height: 300px;
+  }
   .v-review-item__footer {
     display: -webkit-box;
     display: -webkit-flex;
