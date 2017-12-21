@@ -26,6 +26,10 @@
 (function(){
 	document.addEventListener("DOMContentLoaded", function(){
 
+		// Cookie timer
+
+			CookieTimer.start('timerContainer', 'Label String', 600);
+
 		const classes = {
 			active: 'active',
 			menuActive: 'active'
