@@ -289,7 +289,7 @@
                                     </div>
                                   </div>
                                 </section>
-                                <section class="v-security">
+                                <section class="v-security" id="section-consultation">
                                   <div class="v-container">
                                                             <h3 class="v-title-md v-title-section">Безопасность Вашего ребенка - прежде всего
                                                             </h3><img class="v-security__image" src="img/icon-security.png" alt="" role="presentation"/>
@@ -437,7 +437,7 @@
                                     </div>
                                   </div>
                                 </section>
-                                <section class="v-benefits v-benefits_result">
+                                <section class="v-benefits v-benefits_result" id="section-about">
                                                                   <div class="v-quadro v-quadro_style-2 v-benefits__quadro v-benefits__quadro_2"><span class="v-quadro__part v-quadro__part_1"></span><span class="v-quadro__part v-quadro__part_2"></span><span class="v-quadro__part v-quadro__part_3"></span><span class="v-quadro__part v-quadro__part_4"></span><span class="v-quadro__part v-quadro__part_5"></span><span class="v-quadro__part v-quadro__part_6"></span><span class="v-quadro__part v-quadro__part_7"></span><span class="v-quadro__part v-quadro__part_8"></span><span class="v-quadro__part v-quadro__part_9"></span>
                                                                   </div>
                                   <div class="v-container">
@@ -537,7 +537,7 @@
                                                             </div>
                                   </div>
                                 </section>
-                                <section class="v-review v-section">
+                                <section class="v-review v-section" id="section-review">
                                   <div class="v-container">
                                                                     <div class="v-review__shadow v-shadow">
                                                                                                       <div class="v-shadow__header">
@@ -729,15 +729,113 @@
                                     </div>
                                   </div>
                                 </section>
+                                <section class="v-contact">
+                                                                  <div class="v-quadro v-quadro_style-1 v-contact__quadro v-contact__quadro_2"><span class="v-quadro__part v-quadro__part_1"></span><span class="v-quadro__part v-quadro__part_2"></span><span class="v-quadro__part v-quadro__part_3"></span><span class="v-quadro__part v-quadro__part_4"></span><span class="v-quadro__part v-quadro__part_5"></span><span class="v-quadro__part v-quadro__part_6"></span><span class="v-quadro__part v-quadro__part_7"></span><span class="v-quadro__part v-quadro__part_8"></span><span class="v-quadro__part v-quadro__part_9"></span>
+                                                                  </div>
+                                                                  <div class="v-contact__map" id="map">
+                                                                  </div>
+                                                                  <div class="v-contact__info">
+                                                                                                    <p class="v-contact__info-title"><span class="v-color-brand-2">Звоните</span>, <br>приходите в гости
+                                                                                                    </p>
+                                                                                                    <div class="v-contact__info-part v-contact__info-part_phone"><a class="v-contact__info-link" href="tel: +38 (063) 550 03 20 ">+38 (063) 550 03 20</a><a class="v-contact__info-link" href="tel: +38 (066) 538 27 00 ">+38 (066) 538 27 00</a><a class="v-contact__info-link" href="tel: +38 (066) 538 27 00 ">+38 (066) 538 27 00</a><a class="v-contact__info-link" href="tel: +4 (879) 045 79 50 ">+4 (879) 045 79 50</a>
+                                                                                                    </div>
+                                                                                                    <div class="v-contact__info-part v-contact__info-part_email"><a class="v-contact__info-link" href="mailto: info@osvitamarket.com ">info@osvitamarket.com</a>
+                                                                                                    </div>
+                                                                  </div>
+                                </section>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4vqrgTZ81rE5juLYbXT6Tg7y6T8Ii0Nc&amp;callback=initMap"></script>
+        <script>
+          // This example displays a marker at the center of Australia.
+          // When the user clicks the marker, an info window opens.
+          
+          function initMap() {
+          	var uluru = {lat: 50.434675, lng: 30.514878};
+          	var map = new google.maps.Map(document.getElementById('map'), {
+          		zoom: 15,
+          		center: uluru,
+          		disableDefaultUI: true,
+          		scrollwheel: false
+          	});
+          	
+          	var title = 'г. Киев, ул. Антоновича, 33 В, оф. 11';
+          
+          	var contentString = '<div id="content">'+ title + '</div>';
+          
+          	var infowindow = new google.maps.InfoWindow({
+          		content: contentString
+          	});
+          
+          	var marker = new google.maps.Marker({
+          		position: uluru,
+          		map: map,
+          		title: title,
+          		icon: 'img/map-marker.png'
+          	});
+          
+          	infowindow.open(map, marker);
+          	//- marker.addListener('click', function() {
+          		
+          	//- });
+          }
+        </script>
       </div>
-                        <footer class="v-site-footer" id="colophon">
-                                                  <div class="v-site-footer__container">
+                        <footer class="v-site-footer">
+                                                  <div class="v-site-footer__container v-container">
+                                                                            <div class="v-site-footer__row v-row">
+                                                                                                      <div class="v-site-footer__logo v-col-12 v-col-sm-2"><img src="img/logo.png">
+                                                                                                      </div>
+                                                                                                      <div class="v-site-footer__info v-col-12 v-col-sm-10">
+                                                                                                                                <button class="v-site-footer__link" data-action="v-modal" data-open="#modal-politic">Политика конфиденциальности
+                                                                                                                                </button>
+                                                                                                                                <button class="v-site-footer__link" data-action="v-modal" data-open="#modal-otkaz">Отказ от ответственности
+                                                                                                                                </button>
+                                                                                                      </div>
+                                                                            </div>
                                                   </div>
                         </footer>
                         <div class="v-modal" id="modal-form">
                                                   <div class="v-modal__box v-modal__box_default">
                                                                             <div class="v-modal__header">
                                                                                                       <p class="v-modal__title">Modal title
+                                                                                                      </p>
+                                                                                                      <button class="v-modal__close" data-close="vmodal">&times;
+                                                                                                      </button>
+                                                                            </div>
+                                                                            <div class="v-modal__body">
+                                                                                                <form class="v-form v-form_block" action="mail.php" method="POST">
+                                                                                                                          <div class="v-form__content">
+                                                                                                                                                    <div class="v-form__row"><input class="v-form__control" name="vname" type="text" placeholder="Ваше имя"/>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="v-form__row"><input class="v-form__control" name="vemail" type="email" placeholder="Ваш email"/>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="v-form__row"><input class="v-form__control" name="vphone" type="tel" placeholder="Ваш телефон"/>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="v-form__row">
+                                                                                                                                                                              <button class="v-form__submit v-btn v-btn_brand-1 v-btn_shadow-brand-1 v-btn_size-fluid v-effect v-effect_bounce-top" type="submit">Проконсультироваться<br>бесплатно
+                                                                                                                                                                              </button>
+                                                                                                                                                    </div>
+                                                                                                                          </div>
+                                                                                                </form>
+                                                                            </div>
+                                                  </div>
+                        </div>
+                        <div class="v-modal" id="modal-politic">
+                                                  <div class="v-modal__box v-modal__box_default">
+                                                                            <div class="v-modal__header">
+                                                                                                      <p class="v-modal__title">Политика конфиденциальности
+                                                                                                      </p>
+                                                                                                      <button class="v-modal__close" data-close="vmodal">&times;
+                                                                                                      </button>
+                                                                            </div>
+                                                                            <div class="v-modal__body">
+                                                                              <p>Lorem....</p>
+                                                                            </div>
+                                                  </div>
+                        </div>
+                        <div class="v-modal" id="modal-otkaz">
+                                                  <div class="v-modal__box v-modal__box_default">
+                                                                            <div class="v-modal__header">
+                                                                                                      <p class="v-modal__title">Отказ от ответственности
                                                                                                       </p>
                                                                                                       <button class="v-modal__close" data-close="vmodal">&times;
                                                                                                       </button>

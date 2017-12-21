@@ -47,7 +47,7 @@
 				const anchors = document.getElementsByClassName('anchor');
 
 				for(let i = 0; i < anchors.length; i++){
-					anchors[i].addEventListener('click', (e) => {
+					anchors[i].addEventListener('click', function(e) {
 						e.preventDefault();
 						let href = this.getAttribute("href").replace("#", "");
 						let scrollAnchor = document.getElementById(href);
@@ -59,17 +59,18 @@
 			const jsNav = document.getElementById('js-navigation');
 
 			// Navigation links
-				const jsNavLinks = document.querySelectorAll('.nav__menu a[href*="#"]');
+				const jsNavLinks = document.querySelectorAll('.v-nav__menu a[href*="#"]');
 
 				for(var i = 0; i < jsNavLinks.length; i++){
-					jsNavLinks[i].addEventListener('click', (e) => {
+					jsNavLinks[i].addEventListener('click', function(e) {
+
 						e.preventDefault();
 
 						let vnavhref = this.getAttribute("href").replace("#", "");
 						let vnavscrollAnchor = document.getElementById(vnavhref);
 
-						removeClass(jsNavBtn, classes.active);
-						removeClass(jsNav, classes.menuActive);
+						//removeClass(jsNavBtn, classes.active);
+						//removeClass(jsNav, classes.menuActive);
 
 						scrollTo(document.body, vnavscrollAnchor.offsetTop, 600);
 

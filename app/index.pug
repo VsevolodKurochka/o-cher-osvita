@@ -20,12 +20,36 @@ block content
 	include pug/sections/reviews
 	include pug/sections/review-video
 	include pug/sections/bonus
+	include pug/sections/map
 block footer
 	include pug/layouts/footer
 	+b.modal#modal-form
 		+e.box._default
 			+e.header
 				+e.P.title Modal title
+				+e.BUTTON.close(data-close="vmodal") &times;
+			+e.body
+				+b.FORM.form._block(action="mail.php" method="POST")
+					+e.content
+						+e.row
+							+e.INPUT.control(name="vname" type="text" placeholder="Ваше имя")
+						+e.row
+							+e.INPUT.control(name="vemail" type="email" placeholder="Ваш email")
+						+e.row
+							+e.INPUT.control(name="vphone" type="tel" placeholder="Ваш телефон")
+						+e.row
+							+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid.effect._bounce-top(type="submit") Проконсультироваться<br>бесплатно
+	+b.modal#modal-politic
+		+e.box._default
+			+e.header
+				+e.P.title Политика конфиденциальности
+				+e.BUTTON.close(data-close="vmodal") &times;
+			+e.body
+				p Lorem....
+	+b.modal#modal-otkaz
+		+e.box._default
+			+e.header
+				+e.P.title Отказ от ответственности
 				+e.BUTTON.close(data-close="vmodal") &times;
 			+e.body
 				p Lorem....
